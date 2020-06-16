@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;example.exercism.InOrder&apos; to &apos;InOrderBinaryTree&apos;&#x0A;- Original project: &apos;Tes&apos;&#x0A;- Original element: &apos;example.exercism.InOrder&apos;&#x0A;- Renamed element: &apos;example.exercism.InOrderBinaryTree&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;InOrder&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;example.exercism{InOrder.java[InOrder" matchStrategy="1" name="InOrderBinaryTree" qualified="false" references="true" similarDeclarations="false" stamp="1592211062172" textual="false" version="1.0"/>
-</session>

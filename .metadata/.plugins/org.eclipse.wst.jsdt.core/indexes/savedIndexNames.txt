@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+/Users/sri/Documents/workspace-test/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-1116320952.index
-4084442606.index
-2803830445.index
-1337775793.index
-1215614675.index
-3937855434.index
