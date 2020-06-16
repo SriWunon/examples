@@ -1,0 +1,75 @@
+package example.exercism;
+
+/*
+ * Java Program to traverse a binary tree
+ * using inorder traversal without recursion.
+ * In InOrder traversal first left node is visited, followed by root
+ * and right node.
+ *
+ * input:
+ *      40
+ *     /\
+ *    20   50
+ *   / \\
+ *  10  30   60
+ * /   /\
+ * 5  67  78
+ *
+ * output: 5 10 20 30 40 50 60 67 78
+ */
+public class InOrderBinaryTree {
+
+	public static void main(String[] args) {
+		BinaryTree bt = new BinaryTree().create();
+
+		System.out.println("printing nodes of binary tree on InOrder using recursion");
+		bt.inOrder();
+	}
+
+	static class BinaryTree {
+		class Node {
+			String data;
+			Node left, right;
+
+			Node(String value) {
+				this.data = value;
+				left = right = null;
+			}
+		}
+
+		Node root;
+
+		/**
+		 * traverse the binary tree on InOrder traversal algorithm
+		 */
+		public void inOrder() {
+			inOrder(root);
+		}
+
+		private void inOrder(Node node) {
+			if (node == null) {
+				return;
+			}
+			inOrder(node.left);
+			System.out.printf("%s ", node.data);
+			inOrder(node.right);
+		}
+
+		public BinaryTree create() {
+			BinaryTree tree = new BinaryTree();
+			Node root = new Node("40");
+			tree.root = root;
+			tree.root.left = new Node("20");
+			tree.root.left.left = new Node("10");
+			tree.root.left.left.left = new Node("5");
+			tree.root.left.right = new Node("30");
+			tree.root.right = new Node("50");
+			tree.root.right.right = new Node("60");
+			tree.root.left.right.left = new Node("67");
+			tree.root.left.right.right = new Node("78");
+
+			return tree;
+		}
+	}
+
+}

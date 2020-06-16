@@ -1,0 +1,10 @@
+
+public class Hiking {
+
+	public static void main(String[] args) {
+		private static int d = 0;
+		String[] steps = {"D", "D", "U", "U", "U", "U", "D", "D"};
+
+	}
+
+}
