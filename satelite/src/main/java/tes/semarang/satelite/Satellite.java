@@ -14,6 +14,18 @@ public class Satellite {
 		int lenin = inorder.size();
 		int lenpre = preorder.size();
 		
+		if (lenin != lenpre) {
+			throw new IllegalArgumentException("traversals must have the same length");
+		}
+
+		if (!preorder.containsAll(inorder)) {
+			throw new IllegalArgumentException("traversals must have the same elements");
+		}
+		
+		if (findDuplicates(preorder) || findDuplicates(inorder)) {
+			throw new IllegalArgumentException("traversals must contain unique items");
+		}
+		
 		Character[] in = inorder.toArray(new Character[lenin]);
 		Character[] pre = preorder.toArray(new Character[lenpre]);
 		
@@ -50,5 +62,16 @@ public class Satellite {
 				return i;
 		}
 		return i;
+	}
+	
+	boolean findDuplicates(List<Character> listContainingDuplicates) {
+		Set<Character> set1 = new HashSet<>();
+
+		for (Character yourInt : listContainingDuplicates) {
+			if (!set1.add(yourInt)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
