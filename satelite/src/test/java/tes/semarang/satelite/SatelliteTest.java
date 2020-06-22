@@ -17,18 +17,22 @@ public class SatelliteTest  extends TestCase {
         return new TestSuite( SatelliteTest.class );
     }
 
-//    public void testSatellite() { //emptyTree() {
-//        List<Character> preorder = new ArrayList<Character>();
-//        List<Character> inorder = new ArrayList<Character>();
-//
-//        Tree tree = satellite.treeFromTraversals(preorder, inorder);
-//
-//        assertThat(tree.preorder()).containsExactlyElementsOf(preorder);
-//        assertThat(tree.inorder()).containsExactlyElementsOf(inorder);
-//        assertThat(tree.postorder()).isEmpty();
-//    }
+    public void testEmptyTree() { 
+    	System.out.println("empty tree");
+    	
+        List<Character> preorder = new ArrayList<Character>();
+        List<Character> inorder = new ArrayList<Character>();
 
-    public void treeWithOneItem() {
+        Tree tree = satellite.treeFromTraversals(preorder, inorder);
+
+        assertThat(tree.preorder()).containsExactlyElementsOf(preorder);
+        assertThat(tree.inorder()).containsExactlyElementsOf(inorder);
+        assertThat(tree.postorder()).isEmpty();
+    }
+
+    public void testTreeWithOneItem() {
+    	System.out.println("tree with one item");
+    	
         List<Character> preorder = new ArrayList<Character>();
         preorder.add('a');
         List<Character> inorder = new ArrayList<Character>();
@@ -41,7 +45,9 @@ public class SatelliteTest  extends TestCase {
         assertThat(tree.postorder()).containsExactly('a');
     }
 
-    public void testSatellite() { //treeWithManyItems() {
+    public void testTreeWithManyItems() {
+    	System.out.println("tree with many items");
+    	
         List<Character> preorder = new ArrayList<Character>();
         preorder.add('a');
         preorder.add('i');
@@ -64,7 +70,9 @@ public class SatelliteTest  extends TestCase {
     }
 
 
-    public void rejectTraversalsOfDifferentLengths() {
+    public void testRejectTraversalsOfDifferentLengths() {
+    	System.out.println("reject different length");
+    	
         List<Character> preorder = new ArrayList<Character>();
         preorder.add('a');
         preorder.add('b');
@@ -88,7 +96,9 @@ public class SatelliteTest  extends TestCase {
     }
 
 
-    public void rejectInconsistentTraversalsOfSameLength() {
+    public void testRejectInconsistentTraversalsOfSameLength() {
+    	System.out.println("reject inconsistent items");
+    	
         List<Character> preorder = new ArrayList<Character>();
         preorder.add('x');
         preorder.add('y');
@@ -112,7 +122,9 @@ public class SatelliteTest  extends TestCase {
     }
 
 
-    public void rejectTraversalsWithRepeatedItems() {
+    public void testRejectTraversalsWithRepeatedItems() {
+    	System.out.println("reject repeated items");
+    	
         List<Character> preorder = new ArrayList<Character>();
         preorder.add('a');
         preorder.add('b');
